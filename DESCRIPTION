@@ -1,7 +1,7 @@
 Package: BayesianNetwork
-Version: 0.1.0
+Version: 0.1.1
 Title: Bayesian Network Modeling and Analysis
-Description: A Shiny web application for creating interactive Bayesian Network models,
+Description: A 'Shiny' web application for creating interactive Bayesian Network models,
     learning the structure and parameters of Bayesian networks, and utilities for classical
     network analysis.
 URL: https://github.com/paulgovan/bayesiannetwork
@@ -13,9 +13,11 @@ LazyData: TRUE
 Imports: bnlearn, d3heatmap, lattice, networkD3, rhandsontable, shiny,
         shinydashboard
 RoxygenNote: 5.0.1
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2016-07-20 23:37:57 UTC; paulgovan
+Packaged: 2016-10-25 20:20:17 UTC; paulgovan
 Author: Paul Govan [aut, cre]
 Maintainer: Paul Govan <pgovan1@aggienetwork.com>
 Repository: CRAN
-Date/Publication: 2016-07-21 02:10:34
+Date/Publication: 2016-10-25 22:51:09

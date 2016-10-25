@@ -1,11 +1,16 @@
-9fcf6e4c774fd07ccdf162212fe1d88a *DESCRIPTION
+5d7b4563bc79a2bda2cbc406987d8565 *DESCRIPTION
 fa818a259cbed7ce8bc2a22d35a464fc *LICENSE
 9542f8fdaa7a44d3da5b8ae41bb1b42c *NAMESPACE
-a7d0187078e39950e7c0ef96e850177d *R/BayesianNetwork.R
-22848c34315690c2093739937dd5bfef *README.md
-b3fe4f9acb15dc1be85b2a0183c4c00d *inst/bn/server.R
-ff28fdfc9605f17257044f22c22453e3 *inst/bn/ui.R
+f020066fd563c40b9769e5fc8594b71c *NEWS.md
+72aa3c7843a41125bcac3a452bd13449 *R/BayesianNetwork.R
+9a76c4dae2291917490236e54f102771 *README.md
+4c63b0b51fef22de75fc4b96f1c3b082 *build/vignette.rds
+46af2bfa2d97c5fe10ca2bc91e6c64e4 *inst/bn/rsconnect/shinyapps.io/paulgovan/BayesianNetwork.dcf
+0fcdbdc099def6d6af1a5f6cccab15a0 *inst/bn/server.R
+b0d13f38e7bb390eda4b9bc36e269f04 *inst/bn/ui.R
 358ddc07e68eb0a8b44b1134c54c226e *inst/bn/www/favicon.png
+a06e1108a8f22f4a3fda46320bafcd97 *inst/doc/BayesianNetwork.Rmd
+d4aa30c5d4ae1bba0c13852cbe38816c *inst/doc/BayesianNetwork.html
 f3993a5c5af4706bc4887ac54c490130 *inst/images/Dashboard.PNG
 358ddc07e68eb0a8b44b1134c54c226e *inst/images/Icon.png
 8d64f5b3d6f3b0d2194315ad7c33e046 *inst/images/Measures.PNG
@@ -13,3 +18,4 @@ da0af523c85be40b3d85e34117cd49fd *inst/images/Parameters.PNG
 6fb3db986d67a5e3ca65a3bbcf5459c5 *inst/images/Simulation.PNG
 2a66f3a11a0cfaf6fa7e8aab6ac9a6c9 *inst/images/Structure.PNG
 c14b414412b99293e9cd858b3a5ab91d *man/BayesianNetwork.Rd
+a06e1108a8f22f4a3fda46320bafcd97 *vignettes/BayesianNetwork.Rmd
