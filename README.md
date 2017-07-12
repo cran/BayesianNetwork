@@ -6,7 +6,7 @@
 * Generate data from your network and export to your favorite app
 
 # Overview
-BayesianNetwork is a [Shiny](http://shiny.rstudio.com) web application for Bayesian network modeling and analysis, powered by the excellent [bnlearn](http://www.bnlearn.com) and [networkD3](http://christophergandrud.github.io/networkD3/) packages. This app is a more general version of the [RiskNetwork](https://github.com/paulgovan/RiskNetwork) web app. To learn more about our project, check out this [publication](http://ascelibrary.org/doi/abs/10.1061/(ASCE)CO.1943-7862.0001136). For even more background, see this [publication](http://dx.doi.org/10.1061/(ASCE)CO.1943-7862.0001136).
+BayesianNetwork is a [Shiny](http://shiny.rstudio.com) web application for Bayesian network modeling and analysis, powered by the excellent [bnlearn](http://www.bnlearn.com) and [networkD3](http://christophergandrud.github.io/networkD3/) packages. This app is a more general version of the [RiskNetwork](https://github.com/paulgovan/RiskNetwork) web app. To learn more about our project, check out this [publication](http://ascelibrary.org/doi/abs/10.1061/(ASCE)CO.1943-7862.0001136). 
 
 # Getting Started
 To install BayesianNetwork in [R](https://www.r-project.org):
@@ -24,23 +24,23 @@ devtools::install_github('paulgovan/BayesianNetwork')
 To launch the app:
 
 ```
-BayesianNetwork()
+BayesianNetwork::BayesianNetwork()
 ```
 
-Or to access the app through a browser, visit [paulgovan.shinyapps.io/BayesianNetwork](https://paulgovan.shinyapps.io/Bayesiannetwork). 
+Or to access the app through a browser, visit [paulgovan.shinyapps.io/BayesianNetwork](https://paulgovan.shinyapps.io/BayesianNetwork/). 
 
 # Example
-## Dashboard
-Launching the app brings up the Dashboard tab. The Dashboard tab is basically a landing page that gives a brief introduction to the app and includes two value boxes, one each for the number of nodes and arcs in the network. The following figure shows the basic Dashboard tab.
+## Home
+Launching the app brings up the Home tab. The Home tab is basically a landing page that gives a brief introduction to the app and includes two value boxes, one each for the number of nodes and arcs in the network. The following figure shows the basic Home tab.
+
+![Home](https://github.com/paulgovan/BayesianNetwork/blob/master/inst/images/Dashboard.PNG?raw=true)
 
 BayesianNetwork comes with a number of simulated and "real world" data sets. This example will use the "Sample Discrete Network", which is the selected network by default.
-
-![Dashboard](https://github.com/paulgovan/BayesianNetwork/blob/master/inst/images/Dashboard.PNG?raw=true)
 
 ## Structure
 Click Structure in the sidepanel to begin learning the network from the data. The Bayesian network is automatically displayed in the Bayesian Network box.
 
-In order to learn the structure of a network for a given data set, upload the data set in csv format using The Network Input box. Again, this example uses the "Sample Discrete Network", which should already be loaded. 
+In order to learn the structure of a network for a given data set, upload the data set in csv format using The Data Input box. Data should be numeric or factored and should not contain any NULL/NaN/NA values. Again, this example uses the "Sample Discrete Network", which should already be loaded. 
 
 Select a learning algorithm from the *Structural Learning* box. The classes of available structural learning algorithms include:    
 * Constraint-based algorithms
@@ -63,6 +63,11 @@ Select a learning algorithm from the Parameter Learning box. This app supports b
 
 ![Parameters](https://github.com/paulgovan/BayesianNetwork/blob/master/inst/images/Parameters.PNG?raw=true)
 
+## Inference
+Click Inference in the sidebar to add evidence to the network. Select evidence to add to the model using the Evidence box and select a conditional event of interest using the Event box. The resulting conditional probabilities are automatically displayed in the Event Parameter box. For example, the following figure shows the conditional probability of event *B*, given evidence of *c* for node *A*. Changing the evidence for node *A* to *a* or *b* similarly changes the conditional probability of event *B*. Note that inference is currently not supported for continuous variables. 
+
+![Inference](https://github.com/paulgovan/BayesianNetwork/blob/master/inst/images/Inference.png?raw=true)
+
 ## Measures
 Click Measures in the sidepanel to bring up a number of tools for classic network analysis. The Measures tab has a number of node and network measures. The node measures include:
 * Markov blanket
@@ -75,22 +80,16 @@ Click Measures in the sidepanel to bring up a number of tools for classic networ
 * Incoming arcs
 * Outgoing arcs
 
-Select a node measure in the Node Control box and the result will be displayed in the Node Measure box.
+Select a node measure in the Controls box and the result will be displayed in the Node Measure box.
 
-The Network Control box contains different options for displaying hierarchical clusters/dendograms for the network. Select the type of dendogram to display (row, column, both, or none) and the resulting dendogram(s) will be displayed along with the adjacency matrix in the Network Measure box.
+The Controls box also contains different options for displaying hierarchical clusters/dendograms for the network. Select the type of dendogram to display (row, column, both, or none) and the resulting dendogram(s) will be displayed along with the adjacency matrix in the Adjacency Matrix box.
 
 ![Measures](https://github.com/paulgovan/BayesianNetwork/blob/master/inst/images/Measures.PNG?raw=true)
 
-## Simulation
-
-Finally, click Simulation in the sidepanel in order to simulate data from the network for future use. Simply enter the sample size *N* in the Network Simulation box and click Download in order to download a random sample of data from the Bayesian network. 
+## Editor
+Finally, click Editor in the sidepanel in order to bring up the interactive code editor. Some example markdown is automatically displayed in the Editor box. Click the Run button to knit the code and the resulting report will be displayed in the body of the app. 
 
 ![Simulation](https://github.com/paulgovan/BayesianNetwork/blob/master/inst/images/Simulation.PNG?raw=true)
-
-## Future Work
-This package is very much still in development and mutiple improvements are planned, including:
-* Bayesian Inference
-* Expert Kowledge
 
 Please let us know if there are things you would like to see added (or problems with the app!) by opening up an issue using the GitHub issue tracker at [https://github.com/paulgovan/BayesianNetwork/issues](https://github.com/paulgovan/BayesianNetwork/issues)
 

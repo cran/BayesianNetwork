@@ -3,13 +3,16 @@
 #' BayesianNetwork is a Shiny web application for Bayesian Network modeling and
 #' analysis.
 #' @import bnlearn
-#' @import d3heatmap
+#' @import heatmaply
+#' @import plotly
+#' @import rintrojs
 #' @import lattice
 #' @import networkD3
-#' @import rhandsontable
 #' @import shiny
+#' @import shinyAce
 #' @import shinydashboard
 #' @export
+#' @seealso \url{http://paulgovan.github.io/BayesianNetwork/}
 #' @examples
 #' if (interactive()) {
 #'   BayesianNetwork()

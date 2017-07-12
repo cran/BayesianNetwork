@@ -1,10 +1,15 @@
-# BayesianNetwork 0.1.1
+# BayesianNetwork 0.1.3
 
 ## Major changes
+* Added interactive tutorial (rintrojs)
+* Added interactive editor (shinyAce)
+* Added sample size input for Bayesian estimation
 
-* Updated the network plot with the ability to zoom
-* Added vignette
+## Minor changes
+* UI improvements
+* Removed d3heatmap dependency and added heatmaply
 
-## Bug Fixes
+## Bug fixes
+* Fixed bookmark button
+* Fixed web app link
 
-* Fixed issue with tabu learning algorithm
