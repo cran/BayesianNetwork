@@ -1,35 +1,39 @@
 #' @import bnlearn
-#' @import deal
 #' @import heatmaply
 #' @import plotly
 #' @import rintrojs
 #' @import shiny
 #' @import shinyAce
 #' @import shinydashboard
+#' @import shinyWidgets
+
+options(shiny.testmode=TRUE)
+
 # Define required server logic
 shinyServer(function(input, output, session) {
 
   # Get the data selection from user
   dat <- shiny::reactive({
-    if (input$net == 1) {
-      dat <- learning.test
-    } else if (input$net == 2) {
-      dat <- gaussian.test
-    } else if (input$net == 3) {
-      dat <- alarm
-    } else if (input$net == 4) {
-      dat <- insurance
-    } else if (input$net == 5) {
-      dat <- hailfinder
-    } else  {
+    if (input$dataInput == 1) {
+
+      if (input$net == 1) {
+        dat <- learning.test
+      } else if (input$net == 2) {
+        dat <- gaussian.test
+      } else if (input$net == 3) {
+        dat <- alarm
+      } else if (input$net == 4) {
+        dat <- insurance
+      } else if (input$net == 5) {
+        dat <- hailfinder
+      }
+    } else if (input$dataInput == 2) {
 
       # Get the uploaded file from user
       inFile <- input$file
       if (is.null(inFile))
         return(NULL)
-      dat <- read.csv(inFile$datapath,
-                      header = input$header,
-                      sep = input$sep)
+      dat <- read.csv(inFile$datapath)
     }
   })
 
