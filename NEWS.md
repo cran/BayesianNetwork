@@ -1,4 +1,8 @@
-# BayesianNetwork 0.3
+# BayesianNetwork 0.3.2
+
+## Minor improvements and bug fixes
+
+* Updated contact info and citation.
 
 # BayesianNetwork 0.2
 
