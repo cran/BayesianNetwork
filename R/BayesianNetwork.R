@@ -14,11 +14,12 @@
 #' @import shinyWidgets
 #' @export
 #' @seealso \url{http://paulgovan.github.io/BayesianNetwork/}
-#' @return This function does not return a value.
+#' @return The function returns no value. It launches a shiny web application for
+#' Bayesian Network modeling and analysis.
 #' @examples
 #' if (interactive()) {
 #'   BayesianNetwork()
 #' }
 BayesianNetwork <- function() {
-  shiny::runApp(system.file('bn', package = 'BayesianNetwork'))
+  shiny::runApp(system.file("bn", package = "BayesianNetwork"))
 }
